@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Cadastro de funcionários</title>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="header">
+          <span>Cadastro de funcionários</span>
+          <button onclick="openModal()" id="btn_include">incluir</button>
+        </div>
+        <div class="div_table">
+          <table>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Função</th>
+                <th>Salário</th>
+                <th class="action">Editar</th>
+                <th class="action">Excluir</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="modal_container">
+          <div class="modal">
+            <form>
+              <label for="m_name">Nome</label>
+              <input id="m_name" type="text" placeholder="Rafael" required />
+
+              <label for="m_job">Função</label>
+              <input
+                id="m_job"
+                type="text"
+                placeholder="Engenheiro De Software"
+                required
+              />
+
+              <label for="m_salary">Salário</label>
+              <input
+                id="m_salary"
+                type="number"
+                placeholder="6.303,00"
+                required
+              />
+              <button id="btn_save">Salvar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav class="flex">
+        <ul>
+          <li>
+            <img
+              src="img/logoLInkedin.png"
+              alt="Logo-Linkedin"
+              class="style_image"
+            />
+            <a
+              href="https://www.linkedin.com/in/julio-henrique-096256246/"
+              data-replace="Linkedin"
+              target="_blank"
+              class="style_link"
+              ><span>Linkedin</span></a
+            >
+          </li>
+        </ul>
+        <ul>
+          <li>Programador: Julio Henrique Tomoyuki Morizono</li>
+        </ul>
+        <ul>
+          <li>
+            <img
+              src="img/logoGIthub.png"
+              alt="logo-GitHub"
+              class="style_image"
+            />
+            <a
+              href="https://github.com/juliohtm08"
+              data-replace="GitHub"
+              class="style_link"
+              target="_blank"
+              ><span>GitHub</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

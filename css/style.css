@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.style_image {
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+section {
+  background-color: #84b6f4;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  background-color: white;
+  width: 90%;
+  height: 80%;
+  border-radius: 10px;
+}
+
+.header {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto 12px;
+}
+
+.header span {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+#btn_include {
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: rgb(57, 57, 226);
+}
+
+#btn_include:hover {
+  background-color: rgb(100, 100, 255);
+}
+
+.div_table {
+  padding: 10px;
+  width: auto;
+  height: inherit;
+  overflow: auto;
+}
+
+.div_table::-webkit-scrollbar {
+  width: 12px;
+  background-color: whitesmoke;
+}
+
+.div_table::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: darkgray;
+}
+
+table {
+  width: 100%;
+  border-spacing: 10px;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: whitesmoke;
+}
+
+tr {
+  border-bottom: 1px solid rgb(238, 235, 235);
+}
+
+thead tr th {
+  padding: 5px;
+  text-align: start;
+  margin-bottom: 50px;
+}
+
+thead tr th.action {
+  width: 100px;
+  text-align: center;
+}
+
+tbody tr td {
+  vertical-align: text-top;
+  padding: 6px;
+  max-width: 100%;
+}
+
+tbody tr {
+  margin-bottom: 50px;
+}
+
+tbody tr td.action {
+  text-align: center;
+}
+
+td button i {
+  font-size: 20px;
+}
+
+td button i:first-child {
+  margin-right: 0;
+}
+
+.modal_container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.modal label {
+  font-size: 14px;
+  width: 100%;
+}
+
+.modal input {
+  width: 100%;
+  outline: none;
+  padding: 5px 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.modal button {
+  width: 100%;
+  margin: 10px auto;
+  outline: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  width: 100%;
+  border: none;
+  background-color: rgb(57, 57, 226);
+  color: white;
+}
+
+.modal button:hover {
+  background-color: rgb(100, 100, 255);
+}
+
+.active {
+  display: flex;
+}
+
+.active .modal {
+  animation: modal 0.4s;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+td button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+td button i {
+  font-size: 25px;
+}
+
+/* Estilos para o rodapé em geral */
+footer {
+  width: 100vw;
+  padding: 2%;
+  right: 0;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+/* Estilos para a lista não ordenada no rodapé */
+footer ul {
+  list-style-type: none;
+}
+
+/* Estilos para os itens da lista no rodapé */
+footer ul li {
+  color: #000000;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+footer ul li a {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+footer ul li a::before,
+footer ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+footer ul li a::before {
+  background-color: rgb(100, 100, 255);
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+footer ul li a::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: rgb(100, 100, 255);
+}
+
+footer ul li a:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+
+footer ul li a:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+footer ul li a span {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+footer ul li a:hover span {
+  transform: translate3d(-200%, 0, 0);
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  vertical-align: top;
+}
+
+@media (max-width: 774px) {
+  nav ul li {
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 10px;
+  }
+
+  .header span {
+    font-size: 15px;
+  }
+
+  #btn_include {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  thead tr th.action {
+    width: auto;
+  }
+
+  td button i {
+    font-size: 20px;
+  }
+
+  td button i:first-child {
+    margin-right: 0;
+  }
+
+  .modal {
+    width: 90%;
+  }
+
+  .modal label {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 594px) {
+  nav ul li {
+    text-align: center;
+  }
+
+  footer ul li {
+    font-size: 15px;
+  }
+}

@@ -28,3 +28,5 @@ Mensagens de confirmação são exibidas antes de excluir um funcionário, evita
 A tabela é atualizada automaticamente após a realização de operações, refletindo as mudanças nos dados dos funcionários.
 
 Este projeto é uma solução leve e fácil de usar para o gerenciamento de funcionários, proporcionando uma experiência amigável ao usuário.
+
+Link do projeto: https://juliohtm08.github.io/cadastro-de-funcionarios/
